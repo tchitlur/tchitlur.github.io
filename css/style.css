@@ -1,0 +1,199 @@
+/* Tanay Chitlur — portfolio
+   Palette: paper white / ink navy / ECG crimson */
+
+:root {
+  --paper: #fbfbf9;
+  --ink: #1a2332;
+  --muted: #5c6672;
+  --crimson: #c6303e;
+  --hairline: #e4e2dc;
+  --wash: #f3f2ee;
+  --maxw: 46rem;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--ink); text-decoration-color: var(--hairline); text-underline-offset: 3px; }
+a:hover { color: var(--crimson); text-decoration-color: var(--crimson); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--crimson);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
+
+/* Nav */
+header.site {
+  border-bottom: 1px solid var(--hairline);
+}
+header.site .wrap {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 1.1rem;
+  padding-bottom: 1.1rem;
+}
+.wordmark {
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+nav.main { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+nav.main a { text-decoration: none; color: var(--muted); font-size: 0.95rem; }
+nav.main a:hover { color: var(--crimson); }
+
+/* Hero */
+.hero { padding: 4.5rem 0 3rem; }
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  margin: 0 0 0.4rem;
+}
+.hero p.lede {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 38rem;
+  margin: 1.4rem 0 0;
+}
+.trace { display: block; margin-top: 1rem; width: min(26rem, 100%); height: 44px; }
+.trace path {
+  fill: none;
+  stroke: var(--crimson);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .trace path {
+    stroke-dasharray: 620;
+    stroke-dashoffset: 620;
+    animation: draw 1.6s ease-out 0.2s forwards;
+  }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+}
+
+/* Sections */
+section { padding: 2.6rem 0; }
+section + section { border-top: 1px solid var(--hairline); }
+h2 {
+  font-size: 1.35rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.4rem;
+}
+
+/* About */
+.about-grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.about-grid img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--hairline);
+}
+.about-grid p { margin: 0 0 1rem; }
+.about-grid p:last-child { margin-bottom: 0; }
+@media (max-width: 560px) {
+  .about-grid { grid-template-columns: 1fr; }
+}
+
+/* Research list */
+ol.pubs { list-style: none; margin: 0; padding: 0; }
+ol.pubs li {
+  display: grid;
+  grid-template-columns: 4.2rem 1fr;
+  gap: 1.2rem;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--hairline);
+}
+ol.pubs li:first-child { border-top: 1px solid var(--hairline); }
+.pub-year { color: var(--muted); font-variant-numeric: tabular-nums; }
+.pub-title {
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1.4;
+}
+.pub-venue { color: var(--muted); font-size: 0.95rem; margin-top: 0.2rem; }
+.award {
+  display: inline-block;
+  margin-top: 0.45rem;
+  font-size: 0.85rem;
+  color: var(--crimson);
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 0.05rem 0.6rem;
+}
+
+/* Contact */
+.contact-links { display: flex; flex-wrap: wrap; gap: 0.8rem 1.8rem; align-items: center; }
+button.reveal {
+  font: inherit;
+  color: var(--ink);
+  background: var(--wash);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+}
+button.reveal:hover { border-color: var(--crimson); color: var(--crimson); }
+
+/* Project pages */
+.project-head { padding: 3.2rem 0 0.6rem; }
+.crumb { font-size: 0.92rem; color: var(--muted); text-decoration: none; }
+.crumb:hover { color: var(--crimson); }
+.project-head h1 {
+  font-size: clamp(1.7rem, 4.5vw, 2.3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0.9rem 0 0.5rem;
+}
+.project-meta { color: var(--muted); margin: 0; }
+.project-body { padding: 1.6rem 0 3rem; }
+.project-body p { max-width: 40rem; }
+
+.doc-list { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; gap: 0.7rem; }
+.doc-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+  padding: 0.85rem 1.1rem;
+  background: var(--wash);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  text-decoration: none;
+}
+.doc-list a:hover { border-color: var(--crimson); }
+.doc-kind { font-size: 0.85rem; color: var(--crimson); min-width: 5.5rem; }
+.ext-links { margin-top: 1.6rem; font-size: 0.95rem; }
+.ext-links a { margin-right: 1.6rem; }
+
+/* Footer */
+footer.site {
+  border-top: 1px solid var(--hairline);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+footer.site .wrap { padding-top: 1.4rem; padding-bottom: 2rem; }

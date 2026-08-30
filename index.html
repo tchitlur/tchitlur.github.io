@@ -3,247 +3,124 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tanay Chitlur — ECG signal reconstruction &amp; machine learning</title>
-<meta name="description" content="Tanay Chitlur is a computer science student at Carnegie Mellon University working on transformer models that reconstruct 12-lead electrocardiograms from reduced lead sets.">
-<meta property="og:title" content="Tanay Chitlur">
-<meta property="og:description" content="Transformer models for 12-lead ECG reconstruction. IEEE EMBC, IEEE SENSORS, Regeneron ISEF.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M2 20h6l3-12 4 22 4-16 3 6h8' fill='none' stroke='%2316305C' stroke-width='2.5' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+<title>Tanay Chitlur — ML researcher & CS student</title>
+<meta name="description" content="Tanay Chitlur is a Carnegie Mellon computer science student and published machine learning researcher working on transformer architectures for biomedical signal synthesis.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.5..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;650;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<nav>
+<header class="site">
   <div class="wrap">
-    <a class="who" href="index.html">Tanay Chitlur</a>
-    <ul>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#awards">Awards</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<header>
-  <div class="wrap">
-    <p class="mono">Carnegie Mellon University &nbsp;/&nbsp; B.S. Computer Science &nbsp;/&nbsp; Class of 2030</p>
-    <h1>Tanay Chitlur</h1>
-    <p class="tagline">I build transformer models that reconstruct a full diagnostic ECG from <em>a handful of leads</em>.</p>
-    <div class="meta">
-      <a href="mailto:tanay.chitlur@gmail.com">Email</a>
-      <a href="https://www.linkedin.com/in/tanay-chitlur" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://scholar.google.com/citations?user=zGaX3HcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-      <a href="files/resume/tanay-chitlur-resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
-    </div>
-
-    <div class="strip">
-      <div class="strip-head">
-        <span class="mono">Standard 12-lead layout &nbsp;·&nbsp; 25 mm/s</span>
-        <div class="legend">
-          <span class="key mono"><i></i> Recorded — 3 leads</span>
-          <span class="key recon mono"><i></i> Reconstructed — 9 leads</span>
-        </div>
-      </div>
-      <div class="leads" id="leads" aria-hidden="true"></div>
-      <p class="caption">An illustration of the problem I work on, not patient data. A clinical ECG needs twelve leads and ten electrodes. My research asks how much of that record a model can recover from a much smaller set of measurements — the kind a wearable could realistically capture.</p>
-    </div>
+    <a class="wordmark" href="index.html">Tanay Chitlur</a>
+    <nav class="main">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="files/tanay-chitlur-resume.pdf">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
 </header>
 
-<section id="about">
-  <div class="wrap prose">
-    <p>I started working on electrocardiogram synthesis in high school and have kept at it for four years. The through-line is a single question: which parts of a twelve-lead ECG are redundant, and which carry diagnostic information that cannot be inferred from anywhere else?</p>
-    <p>That work has become three peer-reviewed papers, two Regeneron ISEF Grand Awards, and talks at IEEE EMBC, IEEE SENSORS, the Heart Rhythm Society, and AI-Med. I am now a first-year computer science student at Carnegie Mellon.</p>
+<main class="wrap">
+
+  <div class="hero">
+    <h1>Machine learning for the human heart.</h1>
+    <svg class="trace" viewBox="0 0 420 44" aria-hidden="true">
+      <path d="M0 26 H70 L82 26 L90 18 L98 30 L104 26 H150 L158 26 L163 8 L170 40 L177 26 H240 L250 26 L257 20 L264 30 L270 26 H420"/>
+    </svg>
+    <p class="lede">I'm Tanay — a computer science student at Carnegie Mellon and a published ML researcher. I build transformer models that synthesize diagnostic-quality ECG signals, with two first-authored papers in IEEE venues.</p>
   </div>
-</section>
 
-<section id="research">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Research</h2>
-      <span class="mono count">6 projects</span>
-    </div>
-
-    <div class="entry">
-      <div class="rail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 17h4l2-9 3 15 3-11 2 5h8" fill="none" stroke="#16305C" stroke-width="1.6" stroke-linejoin="round"/></svg><span class="mono yr">2025</span></div>
+  <section id="about">
+    <h2>About me</h2>
+    <div class="about-grid">
+      <img src="images/profile.jpg" alt="Portrait of Tanay Chitlur">
       <div>
-        <h3><a href="projects/embc-2025.html">A Transformer-Based Framework with Dynamic Multiscale Attention Mechanisms for 12-Lead ECG Synthesis</a></h3>
-        <p class="venue mono">47th IEEE EMBC &middot; Full paper &middot; IEEE Xplore &amp; PubMed</p>
-        <p class="body">Authored and presented at the world's largest peer-reviewed biomedical engineering conference. The model attends across several time resolutions at once, so it can hold onto both the sharp QRS complex and the slower repolarization it sits inside.</p>
-        <div class="links">
-          <a class="go" href="projects/embc-2025.html">Project page &rarr;</a>
-          <a href="files/embc-2025/embc-2025-paper.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
-          <a href="files/embc-2025/embc-2025-presentation.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
+        <p>I grew up in Portland, Oregon, and started doing research in high school — mostly asking one question: can we generate the parts of a 12-lead ECG we didn't record, well enough for a doctor to trust? Chasing that question led to first-authored papers at IEEE EMBC and IEEE SENSORS, presentations at the Heart Rhythm Society and AI Med, and two ISEF Grand Awards.</p>
+        <p>Now I'm studying computer science at Carnegie Mellon (Class of 2030). Along the way I've interned as an ML engineer at Hello Alfred.ai, captained a FIRST Tech Challenge robotics team for four years, and run a small dessert business, TnT Treats, since 2019. In 2026 I was named a Coca-Cola Scholar, one of 150 selected from over 110,000 applicants.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <h2>Research &amp; projects</h2>
+    <ol class="pubs">
+      <li>
+        <span class="pub-year">2025</span>
+        <div>
+          <a class="pub-title" href="projects/embc-2025.html">Transformer-Based Framework with Dynamic Multiscale Attention Mechanisms for 12-Lead ECG Synthesis</a>
+          <div class="pub-venue">47th IEEE Engineering in Medicine &amp; Biology Conference (EMBC) — first author, peer-reviewed</div>
         </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="rail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 17h4l2-9 3 15 3-11 2 5h8" fill="none" stroke="#16305C" stroke-width="1.6" stroke-linejoin="round"/></svg><span class="mono yr">2025</span></div>
-      <div>
-        <h3><a href="projects/sensors-2025.html">A Morphologically-Aware Transformer Network for High-Fidelity V1&ndash;V5 ECG Lead Generation</a></h3>
-        <p class="venue mono">24th IEEE SENSORS &middot; Full paper &middot; IEEE Xplore</p>
-        <p class="body">Precordial leads carry most of the information a cardiologist uses to localize ischemia, and they are the hardest to place. This network is trained to preserve wave morphology rather than only minimize point-wise error, which is what makes a synthetic lead readable instead of merely close.</p>
-        <div class="links">
-          <a class="go" href="projects/sensors-2025.html">Project page &rarr;</a>
-          <a href="files/sensors-2025/sensors-2025-paper.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
-          <a href="files/sensors-2025/sensors-2025-poster.pdf" target="_blank" rel="noopener">Poster (PDF)</a>
+      </li>
+      <li>
+        <span class="pub-year">2025</span>
+        <div>
+          <a class="pub-title" href="projects/sensors-2025.html">A Morphologically-Aware Transformer Network for High-Fidelity V1–V5 ECG Lead Generation</a>
+          <div class="pub-venue">24th IEEE Conference on Sensors — first author, peer-reviewed</div>
         </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="rail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 17h4l2-9 3 15 3-11 2 5h8" fill="none" stroke="#16305C" stroke-width="1.6" stroke-linejoin="round"/></svg><span class="mono yr">2025</span></div>
-      <div>
-        <h3><a href="projects/isef-2025-intellicane.html">IntelliCane: A Deep Learning Cane for Active Obstacle Avoidance and Navigation for the Visually Impaired</a></h3>
-        <p class="venue mono">Regeneron ISEF &middot; Grand Award, 3rd place &middot; AAAI Special Award</p>
-        <p class="body">A navigation system for people who are blind or have low vision, built around on-device obstacle detection in a form factor someone would actually carry.</p>
-        <div class="links">
-          <a class="go" href="projects/isef-2025-intellicane.html">Project page &rarr;</a>
-          <a href="files/isef-2025-intellicane/isef-2025-poster.pdf" target="_blank" rel="noopener">Poster (PDF)</a>
-          <a href="files/isef-2025-intellicane/isef-2025-abstract.pdf" target="_blank" rel="noopener">Abstract (PDF)</a>
+      </li>
+      <li>
+        <span class="pub-year">2025</span>
+        <div>
+          <a class="pub-title" href="projects/isef-2025.html">IntelliCane: A Deep Learning Cane for Active Obstacle Avoidance &amp; Navigation for the Visually Impaired</a>
+          <div class="pub-venue">Regeneron International Science &amp; Engineering Fair (ISEF)</div>
+          <span class="award">ISEF Grand Award, 3rd place · AAAI Special Award</span>
         </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="rail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 17h4l2-9 3 15 3-11 2 5h8" fill="none" stroke="#16305C" stroke-width="1.6" stroke-linejoin="round"/></svg><span class="mono yr">2024</span></div>
-      <div>
-        <h3><a href="projects/isef-2024.html">Synthesis of a Diagnostic-Caliber 12-Lead Electrocardiogram Using a Novel Multi-resolution Transformer</a></h3>
-        <p class="venue mono">Regeneron ISEF &middot; Grand Award, 2nd place &middot; Invited to HRX 2024</p>
-        <p class="body">The first version of the multi-resolution approach, and the project the two IEEE papers grew out of. Selected through abstract review and invited to present at HRX 2024.</p>
-        <div class="links">
-          <a class="go" href="projects/isef-2024.html">Project page &rarr;</a>
-          <a href="files/isef-2024/isef-2024-poster.pdf" target="_blank" rel="noopener">Poster (PDF)</a>
-          <a href="files/isef-2024/isef-2024-abstract.pdf" target="_blank" rel="noopener">Abstract (PDF)</a>
+      </li>
+      <li>
+        <span class="pub-year">2024</span>
+        <div>
+          <a class="pub-title" href="projects/hrs-2024.html">Validation of Einthoven and Goldberger's Electrocardiographic Lead Systems</a>
+          <div class="pub-venue">Heart Rhythm Society Annual Meeting (HRS 2024)</div>
         </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="rail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 17h4l2-9 3 15 3-11 2 5h8" fill="none" stroke="#16305C" stroke-width="1.6" stroke-linejoin="round"/></svg><span class="mono yr">2024</span></div>
-      <div>
-        <h3><a href="projects/hrs-2024.html">Comprehensive Validation of Einthoven and Goldberger's Electrocardiographic Lead Systems</a></h3>
-        <p class="venue mono">Heart Rhythm Society Annual Meeting &middot; Published abstract</p>
-        <p class="body">A large-scale check of the century-old algebraic relationships that define the limb leads &mdash; the assumptions every reconstruction method quietly inherits.</p>
-        <div class="links">
-          <a class="go" href="projects/hrs-2024.html">Project page &rarr;</a>
-          <a href="files/hrs-2024/hrs-2024-poster.pdf" target="_blank" rel="noopener">Poster (PDF)</a>
-          <a href="files/hrs-2024/hrs-2024-abstract.pdf" target="_blank" rel="noopener">Abstract (PDF)</a>
+      </li>
+      <li>
+        <span class="pub-year">2024</span>
+        <div>
+          <a class="pub-title" href="projects/isef-2024.html">Synthesis of a Diagnostic-Caliber 12-Lead ECG Using a Novel Multi-resolution Transformer</a>
+          <div class="pub-venue">Regeneron ISEF &amp; HRX 2024</div>
+          <span class="award">ISEF Grand Award, 2nd place</span>
         </div>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="rail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 17h4l2-9 3 15 3-11 2 5h8" fill="none" stroke="#16305C" stroke-width="1.6" stroke-linejoin="round"/></svg><span class="mono yr">2023</span></div>
-      <div>
-        <h3><a href="projects/ai-med-2023.html">Early Detection and Synthesis of a 12-Lead ECG Using Density-Based Clustering and GANs</a></h3>
-        <p class="venue mono">AI-Med 2023 &middot; Youngest of 80+ pre- and post-doctoral presenters</p>
-        <p class="body">Where this line of work started: a generative approach to filling in missing leads, a year before I moved to attention-based models.</p>
-        <div class="links">
-          <a class="go" href="projects/ai-med-2023.html">Project page &rarr;</a>
-          <a href="files/ai-med-2023/ai-med-2023-presentation.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
-          <a href="files/ai-med-2023/ai-med-2023-abstract.pdf" target="_blank" rel="noopener">Abstract (PDF)</a>
-          <a href="files/ai-med-2023/ai-med-2023-award.pdf" target="_blank" rel="noopener">Award (PDF)</a>
+      </li>
+      <li>
+        <span class="pub-year">2023</span>
+        <div>
+          <a class="pub-title" href="projects/ai-med-2023.html">Early Detection and Synthesis of a 12-Lead ECG Using Density-Based Clustering and GANs</a>
+          <div class="pub-venue">AI Med 2023 — youngest of 80+ presenters</div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </li>
+    </ol>
+  </section>
 
-<section id="experience">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Experience</h2>
-      <span class="mono count">Three roles</span>
-    </div>
-
-    <div class="job">
-      <div class="job-top">
-        <h3>Software Engineering (AI) Intern — Hello Alfred.ai</h3>
-        <span class="mono">2024 – 2025 · Remote</span>
-      </div>
-      <p>Built a medical history bot for a round-the-clock AI health companion, including the logic that decides when a conversation should escalate to real clinical care. Presented the work at the 2025 Baylor Scott &amp; White Tech4Better Symposium.</p>
-    </div>
-
-    <div class="job">
-      <div class="job-top">
-        <h3>Founder — TnT Treats® Baking LLC</h3>
-        <span class="mono">2019 – Present · Portland, OR</span>
-      </div>
-      <p>An artisanal dessert business I started at eleven and still run. Over $15,000 in lifetime sales, and every part of it — recipes, pricing, storefront, delivery — is something I had to learn from scratch.</p>
-    </div>
-
-    <div class="job">
-      <div class="job-top">
-        <h3>Team Captain &amp; Software Lead — FIRST Tech Challenge, Team 18108</h3>
-        <span class="mono">2021 – 2025 · Portland, OR</span>
-      </div>
-      <p>Led hardware, software, and outreach across four seasons: chassis design, game-piece delivery mechanisms, and the control software tying them together.</p>
-    </div>
-  </div>
-</section>
-
-<section id="awards">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Awards</h2>
-      <span class="mono count">Selected</span>
-    </div>
-    <ul class="awards">
-      <li><span class="mono">2026</span><span><strong>Coca-Cola Scholar.</strong> $20,000 national merit scholarship; 150 recipients from more than 110,000 applicants.</span></li>
-      <li><span class="mono">2025</span><span><strong>Regeneron ISEF Grand Award,</strong> 3rd place, Robotics and Intelligent Machines, plus the AAAI Special Award.</span></li>
-      <li><span class="mono">2024</span><span><strong>Regeneron ISEF Grand Award,</strong> 2nd place, Robotics and Intelligent Machines.</span></li>
-      <li><span class="mono">2023</span><span><strong>AI-Med Youngest Presenter,</strong> among a field of 80+ pre- and post-doctoral researchers.</span></li>
-    </ul>
-  </div>
-</section>
-
-<section id="skills">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Tools</h2>
-      <span class="mono count">What I work in</span>
-    </div>
-    <div class="skills">
-      <div>
-        <h3>Languages</h3>
-        <ul><li>Python</li><li>Java</li><li>C / C++</li><li>CUDA</li><li>Swift</li><li>JavaScript, HTML</li></ul>
-      </div>
-      <div>
-        <h3>Machine learning</h3>
-        <ul><li>PyTorch</li><li>TensorFlow / Keras</li><li>Hugging Face</li><li>Scikit-Learn</li><li>XGBoost</li></ul>
-      </div>
-      <div>
-        <h3>Data</h3>
-        <ul><li>NumPy / SciPy</li><li>Pandas</li><li>h5py</li><li>Matplotlib / Seaborn</li></ul>
-      </div>
-      <div>
-        <h3>Everything else</h3>
-        <ul><li>React</li><li>Linux</li><li>AWS</li><li>Fusion 360</li></ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer id="contact">
-  <div class="wrap">
-    <h2>Get in touch</h2>
-    <p>I am always up for talking about physiological signal modeling, or about anything that involves getting more out of less data. Email is the fastest way to reach me.</p>
-    <div class="meta">
-      <a href="mailto:tanay.chitlur@gmail.com">tanay.chitlur@gmail.com</a>
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-links">
+      <button class="reveal" id="email-btn" type="button">Show email</button>
       <a href="https://www.linkedin.com/in/tanay-chitlur" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://scholar.google.com/citations?user=zGaX3HcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-      <a href="files/resume/tanay-chitlur-resume.pdf" target="_blank" rel="noopener">Résumé</a>
+      <a href="https://scholar.google.com/citations?user=zGaX3HcAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
     </div>
-    <p class="mono colophon">Pittsburgh, PA &nbsp;·&nbsp; Last updated August 2026</p>
-  </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">© 2026 Tanay Chitlur</div>
 </footer>
 
-<script src="assets/js/ecg.js"></script>
+<script>
+document.getElementById('email-btn').addEventListener('click', function () {
+  var u = ['tanay', 'chitlur'].join('.');
+  var d = ['gmail', 'com'].join('.');
+  var addr = u + '\u0040' + d;
+  var a = document.createElement('a');
+  a.href = 'mailto:' + addr;
+  a.textContent = addr;
+  this.replaceWith(a);
+}, { once: true });
+</script>
+
 </body>
 </html>
