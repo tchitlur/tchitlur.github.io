@@ -197,3 +197,47 @@ footer.site {
   font-size: 0.9rem;
 }
 footer.site .wrap { padding-top: 1.4rem; padding-bottom: 2rem; }
+
+/* --- v2: research figure --- */
+.ecg-figure { margin: 1.6rem 0 2.4rem; }
+.ecg-legend {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 2rem;
+  font-size: 0.8rem; letter-spacing: 0.07em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 0.7rem;
+}
+.ecg-legend span { display: inline-flex; align-items: center; gap: 0.55rem; }
+.swatch { display: inline-block; width: 1.6rem; height: 3px; border-radius: 2px; }
+.swatch.navy { background: var(--ink); }
+.swatch.amber { background: #b9821d; }
+.ecg-figure figcaption {
+  margin-top: 0.9rem; color: var(--muted); font-size: 0.95rem;
+  max-width: 38rem; line-height: 1.6;
+}
+
+/* --- v2: richer research entries --- */
+ol.pubs li { grid-template-columns: 4.6rem 1fr; padding: 1.7rem 0; }
+.pub-year { display: flex; flex-direction: column; gap: 0.35rem; }
+.pub-mark { width: 26px; height: 14px; }
+.pub-mark path {
+  fill: none; stroke: var(--ink); stroke-width: 1.8;
+  stroke-linecap: round; stroke-linejoin: round;
+}
+a.pub-title { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
+a.pub-title:hover { color: var(--crimson); }
+.pub-eyebrow {
+  margin-top: 0.45rem; font-size: 0.78rem; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--muted);
+}
+.pub-eyebrow .award-inline { color: var(--crimson); font-weight: 650; }
+.pub-summary { margin: 0.7rem 0 0.9rem; max-width: 40rem; color: var(--ink); }
+.pub-links {
+  font-size: 0.82rem; letter-spacing: 0.07em; text-transform: uppercase;
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.6rem;
+}
+.pub-links a { color: var(--muted); text-decoration-color: var(--hairline); }
+.pub-links a.primary { color: var(--ink); font-weight: 650; text-decoration-color: var(--ink); }
+.pub-links a:hover, .pub-links a.primary:hover { color: var(--crimson); text-decoration-color: var(--crimson); }
+@media (max-width: 480px) {
+  ol.pubs li { grid-template-columns: 1fr; gap: 0.5rem; }
+  .pub-year { flex-direction: row; align-items: center; }
+}
