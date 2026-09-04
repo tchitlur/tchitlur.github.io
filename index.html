@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tanay Chitlur — ML researcher & CS student</title>
 <meta name="description" content="Tanay Chitlur is a Carnegie Mellon computer science student and published machine learning researcher working on transformer architectures for biomedical signal synthesis.">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;650;700&display=swap" rel="stylesheet">
@@ -47,51 +48,121 @@
 
   <section id="research">
     <h2>Research &amp; projects</h2>
+    <p>The main thread of my research is ECG synthesis: a clinical ECG needs twelve leads and ten electrodes, and I ask how much of that record a model can recover from a much smaller set of measurements — the kind a wearable could realistically capture. That question runs through most of the work below, though not all of it: IntelliCane took the same deep learning toolkit to assistive navigation.</p>
+
+    <figure class="ecg-figure">
+      <div class="ecg-legend">
+        <span><span class="swatch navy"></span>Recorded — 3 leads</span>
+        <span><span class="swatch amber"></span>Reconstructed — 9 leads</span>
+      </div>
+      <svg viewBox="0 0 1150 464" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A 12-lead ECG layout: leads I, II, and V6 are recorded; the other nine leads are reconstructed by a model." style="width:100%;height:auto;display:block"><defs><pattern id="gsm" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M 8 0 L 0 0 0 8" fill="none" stroke="#dde2ec" stroke-width="0.6"/></pattern><pattern id="gbg" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#c9d1e0" stroke-width="0.9"/></pattern></defs><rect width="1150" height="464" fill="#f4f6fa"/><rect x="0" y="0" width="280" height="148" fill="url(#gsm)"/><rect x="0" y="0" width="280" height="148" fill="url(#gbg)"/><text x="12" y="26" font-size="15" font-weight="600" fill="#1a2332">I</text><path d="M 0 92 l 3 0 q 8 -4.6 16 0 l 7 0 l 2 2.3 l 3 -34.2 l 4 36.5 l 3 -4.6 l 9 0 q 13 -10.4 26 0 l 19 0 l 3 0 q 8 -4.6 16 0 l 7 0 l 2 2.3 l 3 -34.2 l 4 36.5 l 3 -4.6 l 9 0 q 13 -10.4 26 0 l 19 0 l 3 0 q 8 -4.6 16 0 l 7 0 l 2 2.3 l 3 -34.2 l 4 36.5 l 3 -4.6 l 9 0 q 13 -10.4 26 0 l 19 0" fill="none" stroke="#1a2332" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="290" y="0" width="280" height="148" fill="url(#gsm)"/><rect x="290" y="0" width="280" height="148" fill="url(#gbg)"/><text x="302" y="26" font-size="15" font-weight="600" fill="#b9821d">aVR</text><path d="M 290 92 l 3 0 q 8 3.5 16 0 l 7 0 l 2 -1.2 l 3 23.2 l 4 -24.4 l 3 2.3 l 9 0 q 13 8.1 26 0 l 19 0 l 3 0 q 8 3.5 16 0 l 7 0 l 2 -1.2 l 3 23.2 l 4 -24.4 l 3 2.3 l 9 0 q 13 8.1 26 0 l 19 0 l 3 0 q 8 3.5 16 0 l 7 0 l 2 -1.2 l 3 23.2 l 4 -24.4 l 3 2.3 l 9 0 q 13 8.1 26 0 l 19 0" fill="none" stroke="#b9821d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="580" y="0" width="280" height="148" fill="url(#gsm)"/><rect x="580" y="0" width="280" height="148" fill="url(#gbg)"/><text x="592" y="26" font-size="15" font-weight="600" fill="#b9821d">V1</text><path d="M 580 92 l 3 0 q 8 -2.9 16 0 l 7 0 l 2 -5.8 l 3 -1.2 l 4 37.1 l 3 -30.2 l 9 0 q 13 -5.8 26 0 l 19 0 l 3 0 q 8 -2.9 16 0 l 7 0 l 2 -5.8 l 3 -1.2 l 4 37.1 l 3 -30.2 l 9 0 q 13 -5.8 26 0 l 19 0 l 3 0 q 8 -2.9 16 0 l 7 0 l 2 -5.8 l 3 -1.2 l 4 37.1 l 3 -30.2 l 9 0 q 13 -5.8 26 0 l 19 0" fill="none" stroke="#b9821d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="870" y="0" width="280" height="148" fill="url(#gsm)"/><rect x="870" y="0" width="280" height="148" fill="url(#gbg)"/><text x="882" y="26" font-size="15" font-weight="600" fill="#b9821d">V4</text><path d="M 870 92 l 3 0 q 8 -5.2 16 0 l 7 0 l 2 1.7 l 3 -37.7 l 4 45.2 l 3 -9.3 l 9 0 q 13 -13.9 26 0 l 19 0 l 3 0 q 8 -5.2 16 0 l 7 0 l 2 1.7 l 3 -37.7 l 4 45.2 l 3 -9.3 l 9 0 q 13 -13.9 26 0 l 19 0 l 3 0 q 8 -5.2 16 0 l 7 0 l 2 1.7 l 3 -37.7 l 4 45.2 l 3 -9.3 l 9 0 q 13 -13.9 26 0 l 19 0" fill="none" stroke="#b9821d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="0" y="158" width="280" height="148" fill="url(#gsm)"/><rect x="0" y="158" width="280" height="148" fill="url(#gbg)"/><text x="12" y="184" font-size="15" font-weight="600" fill="#1a2332">II</text><path d="M 0 250 l 3 0 q 8 -5.8 16 0 l 7 0 l 2 2.3 l 3 -40.0 l 4 43.5 l 3 -5.8 l 9 0 q 13 -12.8 26 0 l 19 0 l 3 0 q 8 -5.8 16 0 l 7 0 l 2 2.3 l 3 -40.0 l 4 43.5 l 3 -5.8 l 9 0 q 13 -12.8 26 0 l 19 0 l 3 0 q 8 -5.8 16 0 l 7 0 l 2 2.3 l 3 -40.0 l 4 43.5 l 3 -5.8 l 9 0 q 13 -12.8 26 0 l 19 0" fill="none" stroke="#1a2332" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="290" y="158" width="280" height="148" fill="url(#gsm)"/><rect x="290" y="158" width="280" height="148" fill="url(#gbg)"/><text x="302" y="184" font-size="15" font-weight="600" fill="#b9821d">aVL</text><path d="M 290 250 l 3 0 q 8 -2.9 16 0 l 7 0 l 2 1.7 l 3 -19.1 l 4 25.5 l 3 -8.1 l 9 0 q 13 -5.8 26 0 l 19 0 l 3 0 q 8 -2.9 16 0 l 7 0 l 2 1.7 l 3 -19.1 l 4 25.5 l 3 -8.1 l 9 0 q 13 -5.8 26 0 l 19 0 l 3 0 q 8 -2.9 16 0 l 7 0 l 2 1.7 l 3 -19.1 l 4 25.5 l 3 -8.1 l 9 0 q 13 -5.8 26 0 l 19 0" fill="none" stroke="#b9821d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="580" y="158" width="280" height="148" fill="url(#gsm)"/><rect x="580" y="158" width="280" height="148" fill="url(#gbg)"/><text x="592" y="184" font-size="15" font-weight="600" fill="#b9821d">V2</text><path d="M 580 250 l 3 0 q 8 -3.5 16 0 l 7 0 l 2 -7.0 l 3 -2.3 l 4 44.1 l 3 -34.8 l 9 0 q 13 -17.4 26 0 l 19 0 l 3 0 q 8 -3.5 16 0 l 7 0 l 2 -7.0 l 3 -2.3 l 4 44.1 l 3 -34.8 l 9 0 q 13 -17.4 26 0 l 19 0 l 3 0 q 8 -3.5 16 0 l 7 0 l 2 -7.0 l 3 -2.3 l 4 44.1 l 3 -34.8 l 9 0 q 13 -17.4 26 0 l 19 0" fill="none" stroke="#b9821d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="870" y="158" width="280" height="148" fill="url(#gsm)"/><rect x="870" y="158" width="280" height="148" fill="url(#gbg)"/><text x="882" y="184" font-size="15" font-weight="600" fill="#b9821d">V5</text><path d="M 870 250 l 3 0 q 8 -5.2 16 0 l 7 0 l 2 2.3 l 3 -36.0 l 4 39.4 l 3 -5.8 l 9 0 q 13 -12.8 26 0 l 19 0 l 3 0 q 8 -5.2 16 0 l 7 0 l 2 2.3 l 3 -36.0 l 4 39.4 l 3 -5.8 l 9 0 q 13 -12.8 26 0 l 19 0 l 3 0 q 8 -5.2 16 0 l 7 0 l 2 2.3 l 3 -36.0 l 4 39.4 l 3 -5.8 l 9 0 q 13 -12.8 26 0 l 19 0" fill="none" stroke="#b9821d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="0" y="316" width="280" height="148" fill="url(#gsm)"/><rect x="0" y="316" width="280" height="148" fill="url(#gbg)"/><text x="12" y="342" font-size="15" font-weight="600" fill="#b9821d">III</text><path d="M 0 408 l 3 0 q 8 -4.1 16 0 l 7 0 l 2 1.7 l 3 -27.8 l 4 33.1 l 3 -7.0 l 9 0 q 13 -8.7 26 0 l 19 0 l 3 0 q 8 -4.1 16 0 l 7 0 l 2 1.7 l 3 -27.8 l 4 33.1 l 3 -7.0 l 9 0 q 13 -8.7 26 0 l 19 0 l 3 0 q 8 -4.1 16 0 l 7 0 l 2 1.7 l 3 -27.8 l 4 33.1 l 3 -7.0 l 9 0 q 13 -8.7 26 0 l 19 0" fill="none" stroke="#b9821d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="290" y="316" width="280" height="148" fill="url(#gsm)"/><rect x="290" y="316" width="280" height="148" fill="url(#gbg)"/><text x="302" y="342" font-size="15" font-weight="600" fill="#b9821d">aVF</text><path d="M 290 408 l 3 0 q 8 -4.6 16 0 l 7 0 l 2 1.7 l 3 -30.7 l 4 34.8 l 3 -5.8 l 9 0 q 13 -10.4 26 0 l 19 0 l 3 0 q 8 -4.6 16 0 l 7 0 l 2 1.7 l 3 -30.7 l 4 34.8 l 3 -5.8 l 9 0 q 13 -10.4 26 0 l 19 0 l 3 0 q 8 -4.6 16 0 l 7 0 l 2 1.7 l 3 -30.7 l 4 34.8 l 3 -5.8 l 9 0 q 13 -10.4 26 0 l 19 0" fill="none" stroke="#b9821d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="580" y="316" width="280" height="148" fill="url(#gsm)"/><rect x="580" y="316" width="280" height="148" fill="url(#gbg)"/><text x="592" y="342" font-size="15" font-weight="600" fill="#b9821d">V3</text><path d="M 580 408 l 3 0 q 8 -4.1 16 0 l 7 0 l 2 -4.6 l 3 -15.1 l 4 45.2 l 3 -25.5 l 9 0 q 13 -17.4 26 0 l 19 0 l 3 0 q 8 -4.1 16 0 l 7 0 l 2 -4.6 l 3 -15.1 l 4 45.2 l 3 -25.5 l 9 0 q 13 -17.4 26 0 l 19 0 l 3 0 q 8 -4.1 16 0 l 7 0 l 2 -4.6 l 3 -15.1 l 4 45.2 l 3 -25.5 l 9 0 q 13 -17.4 26 0 l 19 0" fill="none" stroke="#b9821d" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="870" y="316" width="280" height="148" fill="url(#gsm)"/><rect x="870" y="316" width="280" height="148" fill="url(#gbg)"/><text x="882" y="342" font-size="15" font-weight="600" fill="#1a2332">V6</text><path d="M 870 408 l 3 0 q 8 -4.6 16 0 l 7 0 l 2 1.7 l 3 -30.7 l 4 32.5 l 3 -3.5 l 9 0 q 13 -10.4 26 0 l 19 0 l 3 0 q 8 -4.6 16 0 l 7 0 l 2 1.7 l 3 -30.7 l 4 32.5 l 3 -3.5 l 9 0 q 13 -10.4 26 0 l 19 0 l 3 0 q 8 -4.6 16 0 l 7 0 l 2 1.7 l 3 -30.7 l 4 32.5 l 3 -3.5 l 9 0 q 13 -10.4 26 0 l 19 0" fill="none" stroke="#1a2332" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <figcaption>An illustration of the problem, not patient data: from three recorded leads, a model reconstructs the other nine of a standard 12-lead ECG.</figcaption>
+    </figure>
+
     <ol class="pubs">
+
       <li>
-        <span class="pub-year">2025</span>
+        <div class="pub-year">
+          <svg class="pub-mark" viewBox="0 0 26 14" aria-hidden="true"><path d="M0 8 h6 l2 -6 3 10 2 -4 h13"/></svg>
+          <span>2025</span>
+        </div>
         <div>
           <a class="pub-title" href="projects/embc-2025.html">Transformer-Based Framework with Dynamic Multiscale Attention Mechanisms for 12-Lead ECG Synthesis</a>
-          <div class="pub-venue">47th IEEE Engineering in Medicine &amp; Biology Conference (EMBC) — first author, peer-reviewed</div>
+          <div class="pub-eyebrow">47th IEEE EMBC · Full paper · IEEE Xplore &amp; PubMed</div>
+          <p class="pub-summary">First-authored and presented at the world's largest biomedical engineering conference. The model attends across several time resolutions at once, so it can hold onto both the sharp QRS complex and the slower repolarization it sits inside.</p>
+          <div class="pub-links">
+            <a class="primary" href="projects/embc-2025.html">Project page &#8594;</a>
+            <a href="files/embc-2025-paper.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
+            <a href="files/embc-2025-presentation.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
+          </div>
         </div>
       </li>
+
       <li>
-        <span class="pub-year">2025</span>
+        <div class="pub-year">
+          <svg class="pub-mark" viewBox="0 0 26 14" aria-hidden="true"><path d="M0 8 h6 l2 -6 3 10 2 -4 h13"/></svg>
+          <span>2025</span>
+        </div>
         <div>
-          <a class="pub-title" href="projects/sensors-2025.html">A Morphologically-Aware Transformer Network for High-Fidelity V1–V5 ECG Lead Generation</a>
-          <div class="pub-venue">24th IEEE Conference on Sensors — first author, peer-reviewed</div>
+          <a class="pub-title" href="projects/sensors-2025.html">A Morphologically-Aware Transformer Network for High-Fidelity V1&ndash;V5 ECG Lead Generation</a>
+          <div class="pub-eyebrow">24th IEEE Sensors · Full paper · IEEE Xplore</div>
+          <p class="pub-summary">First-authored and presented at IEEE SENSORS. The network is trained on waveform morphology, not just point-wise error, so the generated V1&ndash;V5 chest leads keep the shape features clinicians actually read.</p>
+          <div class="pub-links">
+            <a class="primary" href="projects/sensors-2025.html">Project page &#8594;</a>
+            <a href="files/sensors-2025-paper.pdf" target="_blank" rel="noopener">Paper (PDF)</a>
+            <a href="files/sensors-2025-poster.pdf" target="_blank" rel="noopener">Poster (PDF)</a>
+          </div>
         </div>
       </li>
+
       <li>
-        <span class="pub-year">2025</span>
+        <div class="pub-year">
+          <svg class="pub-mark" viewBox="0 0 26 14" aria-hidden="true"><path d="M0 8 h6 l2 -6 3 10 2 -4 h13"/></svg>
+          <span>2025</span>
+        </div>
         <div>
           <a class="pub-title" href="projects/isef-2025.html">IntelliCane: A Deep Learning Cane for Active Obstacle Avoidance &amp; Navigation for the Visually Impaired</a>
-          <div class="pub-venue">Regeneron International Science &amp; Engineering Fair (ISEF)</div>
-          <span class="award">ISEF Grand Award, 3rd place · AAAI Special Award</span>
+          <div class="pub-eyebrow">Regeneron ISEF 2025 · <span class="award-inline">Grand Award, 3rd place · AAAI Special Award</span></div>
+          <p class="pub-summary">A cane with an onboard deep learning system that detects obstacles and guides the user around them in real time — the same toolkit as my ECG work, aimed at assistive navigation instead.</p>
+          <div class="pub-links">
+            <a class="primary" href="projects/isef-2025.html">Project page &#8594;</a>
+            <a href="files/isef-2025-abstract.pdf" target="_blank" rel="noopener">Abstract (PDF)</a>
+            <a href="files/isef-2025-poster.pdf" target="_blank" rel="noopener">Poster (PDF)</a>
+          </div>
         </div>
       </li>
+
       <li>
-        <span class="pub-year">2024</span>
+        <div class="pub-year">
+          <svg class="pub-mark" viewBox="0 0 26 14" aria-hidden="true"><path d="M0 8 h6 l2 -6 3 10 2 -4 h13"/></svg>
+          <span>2024</span>
+        </div>
         <div>
           <a class="pub-title" href="projects/hrs-2024.html">Validation of Einthoven and Goldberger's Electrocardiographic Lead Systems</a>
-          <div class="pub-venue">Heart Rhythm Society Annual Meeting (HRS 2024)</div>
+          <div class="pub-eyebrow">Heart Rhythm Society 2024 · Abstract &amp; poster</div>
+          <p class="pub-summary">Validation research on the century-old lead systems the standard 12-lead ECG is built on, published and presented at the Heart Rhythm Society's annual meeting.</p>
+          <div class="pub-links">
+            <a class="primary" href="projects/hrs-2024.html">Project page &#8594;</a>
+            <a href="files/hrs-2024-abstract.pdf" target="_blank" rel="noopener">Abstract (PDF)</a>
+            <a href="files/hrs-2024-poster.pdf" target="_blank" rel="noopener">Poster (PDF)</a>
+          </div>
         </div>
       </li>
+
       <li>
-        <span class="pub-year">2024</span>
+        <div class="pub-year">
+          <svg class="pub-mark" viewBox="0 0 26 14" aria-hidden="true"><path d="M0 8 h6 l2 -6 3 10 2 -4 h13"/></svg>
+          <span>2024</span>
+        </div>
         <div>
           <a class="pub-title" href="projects/isef-2024.html">Synthesis of a Diagnostic-Caliber 12-Lead ECG Using a Novel Multi-resolution Transformer</a>
-          <div class="pub-venue">Regeneron ISEF &amp; HRX 2024</div>
-          <span class="award">ISEF Grand Award, 2nd place</span>
+          <div class="pub-eyebrow">Regeneron ISEF 2024 · HRX 2024 · <span class="award-inline">Grand Award, 2nd place</span></div>
+          <p class="pub-summary">A multi-resolution transformer that synthesizes a complete, diagnostic-caliber 12-lead ECG — the project that started the thread, later presented at HRX 2024.</p>
+          <div class="pub-links">
+            <a class="primary" href="projects/isef-2024.html">Project page &#8594;</a>
+            <a href="files/isef-2024-abstract.pdf" target="_blank" rel="noopener">Abstract (PDF)</a>
+            <a href="files/isef-2024-poster.pdf" target="_blank" rel="noopener">Poster (PDF)</a>
+          </div>
         </div>
       </li>
+
       <li>
-        <span class="pub-year">2023</span>
+        <div class="pub-year">
+          <svg class="pub-mark" viewBox="0 0 26 14" aria-hidden="true"><path d="M0 8 h6 l2 -6 3 10 2 -4 h13"/></svg>
+          <span>2023</span>
+        </div>
         <div>
           <a class="pub-title" href="projects/ai-med-2023.html">Early Detection and Synthesis of a 12-Lead ECG Using Density-Based Clustering and GANs</a>
-          <div class="pub-venue">AI Med 2023 — youngest of 80+ presenters</div>
+          <div class="pub-eyebrow">AI Med 2023 · Youngest of 80+ presenters</div>
+          <p class="pub-summary">Early generative work pairing density-based clustering with GANs for ECG synthesis, presented at AI Med 2023 as the youngest of more than 80 pre- and post-doctoral presenters.</p>
+          <div class="pub-links">
+            <a class="primary" href="projects/ai-med-2023.html">Project page &#8594;</a>
+            <a href="files/ai-med-2023-presentation.pdf" target="_blank" rel="noopener">Slides (PDF)</a>
+            <a href="files/ai-med-2023-abstract.pdf" target="_blank" rel="noopener">Abstract (PDF)</a>
+          </div>
         </div>
       </li>
+
     </ol>
   </section>
 
@@ -112,13 +183,20 @@
 
 <script>
 document.getElementById('email-btn').addEventListener('click', function () {
-  var u = ['tanay', 'chitlur'].join('.');
-  var d = ['gmail', 'com'].join('.');
-  var addr = u + '\u0040' + d;
-  var a = document.createElement('a');
-  a.href = 'mailto:' + addr;
-  a.textContent = addr;
-  this.replaceWith(a);
+  var at = '\u0040';
+  var addrs = [
+    ['tanay', 'chitlur'].join('.') + at + ['gmail', 'com'].join('.'),
+    'tchitlur' + at + ['andrew', 'cmu', 'edu'].join('.')
+  ];
+  var span = document.createElement('span');
+  span.className = 'contact-links';
+  addrs.forEach(function (addr) {
+    var a = document.createElement('a');
+    a.href = 'mailto:' + addr;
+    a.textContent = addr;
+    span.appendChild(a);
+  });
+  this.replaceWith(span);
 }, { once: true });
 </script>
 
