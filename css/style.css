@@ -241,3 +241,19 @@ a.pub-title:hover { color: var(--crimson); }
   ol.pubs li { grid-template-columns: 1fr; gap: 0.5rem; }
   .pub-year { flex-direction: row; align-items: center; }
 }
+
+/* --- v3: update bar --- */
+.update-bar {
+  background: #fbf1f1;
+  border-bottom: 1px solid #f0dcdc;
+  font-size: 0.9rem;
+}
+.update-bar .wrap { padding-top: 0.55rem; padding-bottom: 0.55rem; }
+.update-label {
+  color: var(--crimson);
+  font-weight: 650;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-right: 0.7rem;
+}
