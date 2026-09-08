@@ -257,3 +257,70 @@ a.pub-title:hover { color: var(--crimson); }
   text-transform: uppercase;
   margin-right: 0.7rem;
 }
+
+/* --- v4: awards + tools --- */
+ol.awards { list-style: none; margin: 0; padding: 0; }
+ol.awards li {
+  display: grid; grid-template-columns: 4.6rem 1fr; gap: 1.2rem;
+  padding: 1.05rem 0; border-bottom: 1px solid var(--hairline);
+}
+ol.awards li:first-child { border-top: 1px solid var(--hairline); }
+.award-year { color: var(--muted); font-variant-numeric: tabular-nums; }
+ol.awards strong { font-weight: 650; }
+@media (max-width: 480px) {
+  ol.awards li { grid-template-columns: 1fr; gap: 0.25rem; }
+}
+
+.tools-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;
+}
+.tools-grid h3 {
+  font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); font-weight: 650; margin: 0 0 0.6rem;
+}
+.tools-grid ul { list-style: none; margin: 0; padding: 0; }
+.tools-grid li {
+  padding: 0.45rem 0; border-bottom: 1px solid var(--hairline); font-size: 0.98rem;
+}
+@media (max-width: 720px) { .tools-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 400px) { .tools-grid { grid-template-columns: 1fr; } }
+
+#contact > p { max-width: 34rem; margin-top: 0; }
+
+/* --- v5: mobile polish --- */
+.ecg-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.ecg-scroll svg { min-width: 640px; }
+.scroll-hint { display: none; }
+
+.doc-list a { flex-wrap: wrap; }
+.contact-links a { overflow-wrap: anywhere; }
+
+@media (max-width: 640px) {
+  /* header: wordmark on top, nav in a clean row beneath — no awkward wrap */
+  header.site .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+  }
+  nav.main { gap: 1.15rem; }
+  nav.main a { font-size: 0.9rem; }
+
+  .hero { padding: 3rem 0 2.2rem; }
+  section { padding: 2.1rem 0; }
+
+  .update-bar { font-size: 0.82rem; line-height: 1.5; }
+
+  .scroll-hint {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .pub-links { gap: 0.4rem 1.2rem; }
+  .project-head { padding-top: 2.2rem; }
+}
