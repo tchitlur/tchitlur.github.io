@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Slipstream: Rare-Disease Research Navigator — Tanay Chitlur</title>
+<meta name="description" content="Slipstream maps which rare-disease communities are further along the same research road, so families and researchers can borrow what transfers. 2nd place of 3,000+ at the Hack-Nation Global AI Hackathon, October 2026.">
+<link rel="canonical" href="https://tanaychitlur.com/projects/hack-nation-2026.html">
+<link rel="icon" href="/favicon.png" sizes="96x96" type="image/png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;650;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css?v=7">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="wordmark" href="../index.html">Tanay Chitlur</a>
+    <nav class="main">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#research">Research</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#awards">Awards</a>
+      <a href="../files/tanay-chitlur-resume.pdf">Resume</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="project-head">
+    <a class="crumb" href="../index.html#projects">&#8592; All projects</a>
+    <h1>Slipstream: Rare-Disease Research Navigator</h1>
+    <p class="project-meta">Hack-Nation Global AI Hackathon · 2nd place of 3,000+ · October 3&ndash;4, 2026</p>
+  </div>
+
+  <div class="project-body">
+    <p>There are thousands of rare diseases, and most families affected by one are starting from scratch. But many rare diseases break the same way: the same kind of lost protein, the same mechanism, the same path from gene discovery to a treatment. Slipstream lets a parent type in their child's gene or diagnosis and see which disease community is further along that same road, and what can be borrowed from it.</p>
+    <p>I built a 2,700-node disease graph from Gene2Phenotype, the Human Phenotype Ontology, ClinicalTrials.gov, NIH RePORTER, and PubMed, clustered it with Louvain community detection, and ran an LLM pipeline over 1,000+ studies and trials. For each condition, Slipstream computes a research-readiness ladder (gene link, mechanism, patient organization, registry, disease models, funding, targeted trial, approved therapy). For any neighboring disease, it gives a transfer verdict per asset: transferable, needs expert review, or do not transfer. The output is a one-page sourced brief a family can send to a patient community. It covers 83 conditions across 65 genes in developmental and epileptic encephalopathies in depth, plus 2,783 more conditions at mechanism-and-symptoms depth.</p>
+    <p>The Hack-Nation Global AI Hackathon is a 24-hour, worldwide hackathon hosted with the MIT Club of Northern California and the MIT Club of Germany, with 15+ in-person hubs including MIT, Harvard, Stanford, Berkeley, and Carnegie Mellon, plus online participation. The 7th edition ran October 3&ndash;4, 2026, with 3,000+ participants competing across sponsor challenges for $30K+ in prizes, judged by mentors from OpenAI, Meta, Apple, and leading AI startups. Slipstream was built for Challenge 05, &ldquo;AI Atlas for the World's Rare Diseases,&rdquo; and took 2nd place.</p>
+    <ul class="doc-list">
+      <li><a href="https://slipstreamhackathon.vercel.app/" target="_blank" rel="noopener"><span class="doc-kind">Live demo</span> slipstreamhackathon.vercel.app</a></li>
+      <li><a href="https://github.com/tchitlur/slipstream_hackathon" target="_blank" rel="noopener"><span class="doc-kind">Code</span> github.com/tchitlur/slipstream_hackathon</a></li>
+      <li><a href="https://hack-nation.ai/" target="_blank" rel="noopener"><span class="doc-kind">Event</span> Hack-Nation Global AI Hackathon</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">© 2026 Tanay Chitlur</div>
+</footer>
+
+</body>
+</html>

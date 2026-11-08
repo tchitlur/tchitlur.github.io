@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GlucoPilot: A Personalized Glucose Simulator for Type 1 Diabetes — Tanay Chitlur</title>
+<meta name="description" content="GlucoPilot simulates a Type 1 diabetic's body to forecast blood glucose, answer everyday 'can I?' questions, and compare lifestyle changes over 30 days. 2nd place in the Food track at HackCMU 2026.">
+<link rel="canonical" href="https://tanaychitlur.com/projects/hackcmu-2026.html">
+<link rel="icon" href="/favicon.png" sizes="96x96" type="image/png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;650;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css?v=7">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="wordmark" href="../index.html">Tanay Chitlur</a>
+    <nav class="main">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#research">Research</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#awards">Awards</a>
+      <a href="../files/tanay-chitlur-resume.pdf">Resume</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="project-head">
+    <a class="crumb" href="../index.html#projects">&#8592; All projects</a>
+    <h1>GlucoPilot: A Personalized Glucose Simulator for Type 1 Diabetes</h1>
+    <p class="project-meta">HackCMU 2026 · Carnegie Mellon · 2nd place, Food track · September 11&ndash;12, 2026</p>
+  </div>
+
+  <div class="project-body">
+    <p>Living with Type 1 diabetes means making dozens of small decisions a day about food, drink, insulin, and activity, with only a rough feel for how they interact. GlucoPilot is a personalized simulation of a Type 1 diabetic's body: food, alcohol, caffeine, insulin, exercise, sleep, illness, stress, and water all feed a physiology model, and the app shows what happens next.</p>
+    <p>It produces a short-horizon glucose forecast with uncertainty bands, makes permission decisions (&ldquo;can I have another drink?&rdquo;) together with the condition that would make it safe, and runs 30-day comparisons of lifestyle changes side by side. Under the hood it combines the Hovorka glucose-insulin model with a LightGBM residual model, in a FastAPI backend with a React and Recharts front end; meals can be logged by text or photo via a vision-language model. All data is synthetic, and it is decision support, not medical advice.</p>
+    <p>HackCMU is Carnegie Mellon's annual 24-hour, beginner-friendly hackathon, organized by ACM@CMU. The 2026 edition, &ldquo;Midnight Express,&rdquo; ran September 11&ndash;12, 2026, on campus in Pittsburgh; tracks were announced at the opening ceremony and teams chose one at submission. GlucoPilot took 2nd place in the Food track.</p>
+    <ul class="doc-list">
+      <li><a href="https://github.com/tchitlur/diabetesbotty" target="_blank" rel="noopener"><span class="doc-kind">Code</span> github.com/tchitlur/diabetesbotty</a></li>
+      <li><a href="https://www.acmatcmu.com/hackcmu2026/" target="_blank" rel="noopener"><span class="doc-kind">Event</span> HackCMU 2026 · ACM@CMU</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">© 2026 Tanay Chitlur</div>
+</footer>
+
+</body>
+</html>

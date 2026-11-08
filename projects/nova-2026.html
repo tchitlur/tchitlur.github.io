@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rush Rehearsal: A Restaurant Rush Simulator with Causal Attribution — Tanay Chitlur</title>
+<meta name="description" content="Rush Rehearsal simulates a restaurant's busiest nights from real event and weather data, attributes the causes of a rush with Shapley values, and stress-tests LLM-proposed fixes. Built solo at NOVA 2026, Carnegie Mellon's GenAI hackathon; 2nd place in the DoorDash track for most creative solution.">
+<link rel="canonical" href="https://tanaychitlur.com/projects/nova-2026.html">
+<link rel="icon" href="/favicon.png" sizes="96x96" type="image/png">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;650;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css?v=7">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="wordmark" href="../index.html">Tanay Chitlur</a>
+    <nav class="main">
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#research">Research</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#awards">Awards</a>
+      <a href="../files/tanay-chitlur-resume.pdf">Resume</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="project-head">
+    <a class="crumb" href="../index.html#projects">&#8592; All projects</a>
+    <h1>Rush Rehearsal: A Restaurant Rush Simulator with Causal Attribution</h1>
+    <p class="project-meta">NOVA 2026 · Carnegie Mellon · 2nd place, DoorDash track · Most Creative Solution · November 7, 2026</p>
+  </div>
+
+  <div class="project-body">
+    <p>Restaurants get blindsided by rushes they could have seen coming: a concert letting out down the street, a cold snap, a local festival. Rush Rehearsal lets a restaurant rehearse the night before it happens. It pulls real Ticketmaster events, Open-Meteo weather, and web-searched local happenings around a North Shore, Pittsburgh location, then simulates the kitchen in 3D as orders arrive, stations back up, and tickets slip past their targets.</p>
+    <p>The simulator doesn't just show the rush, it explains it. Shapley values attribute how much of the night's delay came from each cause, and an LLM proposes concrete interventions (prep more of one item, add a station, change the menu for the night). The simulator then replays each proposal over 300 simulated nights so the suggestion comes with evidence instead of a guess. The restaurant, menu, and order history are synthetic; the events and weather are real.</p>
+    <p>Built with Next.js, TypeScript, Tailwind, react-three-fiber for the 3D kitchen, Web Workers for the simulation, and Claude models via OpenRouter for planning.</p>
+    <p>NOVA is Carnegie Mellon's GenAI hackathon, run by ScottyLabs. The 2026 edition was a one-day sprint on Saturday, November 7, 2026, at the Swartz Center for Entrepreneurship, where teams of up to four built with free API credits for frontier models and pitched to sponsor tracks. I built Rush Rehearsal solo for DoorDash's merchant-experience track, and it took 2nd place in the track as the most creative solution.</p>
+    <ul class="doc-list">
+      <li><a href="https://rushhour-psi.vercel.app/" target="_blank" rel="noopener"><span class="doc-kind">Live demo</span> rushhour-psi.vercel.app</a></li>
+      <li><a href="https://github.com/tchitlur/rushhour" target="_blank" rel="noopener"><span class="doc-kind">Code</span> github.com/tchitlur/rushhour</a></li>
+      <li><a href="https://nova.scottylabs.org/" target="_blank" rel="noopener"><span class="doc-kind">Event</span> NOVA 2026 · ScottyLabs</a></li>
+    </ul>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="wrap">© 2026 Tanay Chitlur</div>
+</footer>
+
+</body>
+</html>
